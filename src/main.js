@@ -1,3 +1,6 @@
 "use strict"
+import { SERVER, PORT } from "./server";
 
-console.log("Your app has started.");
+SERVER.listen(PORT, () => {
+    console.log("Server has started")
+});
