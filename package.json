@@ -4,6 +4,7 @@
   "description": "This is a small webshop project primarly to learn NodeJS.",
   "main": "src",
   "scripts": {
+    "dev": "nodemon .",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "esm": "^3.2.25",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
   }
 }
