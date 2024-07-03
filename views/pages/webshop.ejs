@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="btn btn-outline-success col-lg-6" style="border: none; text-align: left; margin: 2px;" href="/">Főoldal</a>
+        <a class="btn btn-outline-success" href="cart">Kosár()</a>
+    </div>
+</nav>
+<h1>Termékeink</h1>
+<div class="container">
+    <div class="row justify-content-around" style="padding: 15;">
+        <div th:each="product:${products}" class="card" style="width: 18rem;">
+            <img th:src="@{${product.picturePath}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${product.name}">Product name here </h5>
+                <p class="card-text" th:text="${product.description}">Product description here</p>
+                <div class="container">
+                    <p class="card-text" th:text="${product.price}">Product price here</p>
+                    <input type="button" class="btn btn-success" onclick="href='/addToCart'" value="Kosárba"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
